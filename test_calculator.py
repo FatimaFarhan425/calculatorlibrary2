@@ -1,9 +1,15 @@
 """
-Calculator library containing basic math operations.
+Unit tests for the calculator library
 """
+import unittest
+import calculator
 
-def add(first_term, second_term):
-    return first_term + second_term
 
-def subtract(first_term, second_term):
-    return first_term - second_term
+class TestCalculator(unittest.TestCase):
+
+    def test_addition(self):
+        assert 4 == calculator.add(2, 2)
+
+    def test_subtraction(self):
+        assert 2 == calculator.subtract(4, 2)
+
